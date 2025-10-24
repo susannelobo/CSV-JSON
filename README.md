@@ -16,6 +16,7 @@ This is a Node.js (Express) application built for the Kelp coding challenge. It 
 
 [Node.js](https://nodejs.org/)
 [PostgreSQL](https://www.postgresql.org/)
+
 A test `data.csv` file (example provided in the repository).
 
 # Setup and Installation
@@ -43,11 +44,13 @@ CSV_FILE_PATH=./data.csv
 
 # Final log 
 Upload request received. Starting CSV processing...
+
 Successfully inserted batch of 10 records.
+
 All data has been successfully uploaded to the database.
+
 
 Calculating Age Distribution:
 
-Age Distribution Report
 <img width="407" height="222" alt="image" src="https://github.com/user-attachments/assets/c900bf9b-f36e-4f91-97f0-1e2bb4d3d9a8" />
 
