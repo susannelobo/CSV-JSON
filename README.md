@@ -40,3 +40,21 @@ CSV_FILE_PATH=./data.csv
   1. node index.js
   2. Run the following curl command to trigger the /upload endpoint:
    curl -X POST http://localhost:3000/upload
+
+# Final log 
+Upload request received. Starting CSV processing...
+Successfully inserted batch of 10 records.
+All data has been successfully uploaded to the database.
+
+Calculating Age Distribution...
+
+--- Age Distribution Report ---
+┌───────────┬──────────────┬──────────────────┐
+│ (index)   │  Age-Group   │ % Distribution   │
+├───────────┼──────────────┼──────────────────┤
+│ 0         │  '< 20'      │ '...'            │
+│ 1         │  '20 to 40'  │ '...'            │
+│ 2         │  '40 to 60'  │ '...'            │
+│ 3         │  '> 60'      │ '...'            │
+└───────────┴──────────────┴──────────────────┘
+---------------------------------
