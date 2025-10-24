@@ -14,9 +14,9 @@ This is a Node.js (Express) application built for the Kelp coding challenge. It 
 
 -Requirements
 
-[Node.js](https://nodejs.org/) (v18.x or later recommended)
+[Node.js](https://nodejs.org/)
 [PostgreSQL](https://www.postgresql.org/)
-A test `data.csv` file (one is provided in this repository).
+A test `data.csv` file (example provided in the repository).
 
 -Setup and Installation
 
