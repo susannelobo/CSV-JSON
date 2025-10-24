@@ -1,4 +1,9 @@
-﻿name.firstName,name.lastName,age,address.line1,address.line2,address.city,Address.State,gender
+name.firstName,name.lastName,age,address.line1,address.line2,address.city,Address.State,gender
 Rohit,Prasad,22,Society1,Apt1,City1,LA,M
 Jane,Lopes,33,Society2,Apt2,City2,NY,F
 Jim,Beam,55,Society3,Apt 3,City3,TX,M
+Anne,Red,66,Society4,Apt4,City4,BM,F
+Joan,Grey,05,Society5,Apt5,City5,TM,M
+James,Wilson,60,404 Spruce Way,,Lakeview,WA,male,Architect,Lakeview Elem,B+,Lakeview High,M.Arch,Architecture
+Patricia,Miller,75,505 Redwood Dr,,Sun City,AZ,female,Retired,,,,
+Chris,Taylor,18,606 Willow Ave,Apt 2B,Green Valley,NV,male,Student,Green Valley Elem,C,Green Valley High,,
