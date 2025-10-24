@@ -1,5 +1,4 @@
 # KelpAssignment
-# kelp_assignment
 
 - Kelp Coding Challenge: CSV to JSON API
 
