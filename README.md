@@ -49,11 +49,5 @@ All data has been successfully uploaded to the database.
 Calculating Age Distribution:
 
 Age Distribution Report
-┌───────────┬──────────────┬──────────────────┐
-│ (index)   │  Age-Group   │ % Distribution   │
-├───────────┼──────────────┼──────────────────┤
-│ 0         │  '< 20'      │ '...'            │
-│ 1         │  '20 to 40'  │ '...'            │
-│ 2         │  '40 to 60'  │ '...'            │
-│ 3         │  '> 60'      │ '...'            │
-└───────────┴──────────────┴──────────────────┘
+<img width="407" height="222" alt="image" src="https://github.com/user-attachments/assets/c900bf9b-f36e-4f91-97f0-1e2bb4d3d9a8" />
+
