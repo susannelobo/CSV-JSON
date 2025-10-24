@@ -4,7 +4,7 @@
 
 This is a Node.js (Express) application built for the Kelp coding challenge. It provides an API endpoint that reads a CSV file, parses it, uploads the data to a PostgreSQL database, and then prints an age distribution report to the console.
 
--Features
+# Features
 
 1. Custom CSV Parser: Reads and parses large CSV files (50,000+ rows) line-by-line using Node.js Streams, without using any third-party CSV libraries.
 2. Nested JSON Conversion: Correctly handles dot-notation headers (e.g., `name.firstName`) to create nested JSON objects.
@@ -12,13 +12,13 @@ This is a Node.js (Express) application built for the Kelp coding challenge. It 
 4. Data Mapping: Maps mandatory fields (`name`, `age`, `address`) to specific columns and all other fields to a `additional_info` JSONB column.
 5. Age Distribution Report: Automatically calculates and prints an age distribution report to the console after the upload is complete.
 
--Requirements
+# Requirements
 
 [Node.js](https://nodejs.org/)
 [PostgreSQL](https://www.postgresql.org/)
 A test `data.csv` file (example provided in the repository).
 
--Setup and Installation
+# Setup and Installation
 
 1. Clone the Repository
 2. Install Dependencies - npm install
@@ -33,7 +33,7 @@ A test `data.csv` file (example provided in the repository).
 4. Configure Environment Variables
    cp example.env .env
 5. Edit the new .env file with your specific database connection string:
-   # .env file
+    .env file
 DATABASE_URL=postgresql://YOUR_USER:YOUR_PASSWORD@localhost:5432/YOUR_DB_NAME
 CSV_FILE_PATH=./data.csv
 6. Running the Application
@@ -46,9 +46,9 @@ Upload request received. Starting CSV processing...
 Successfully inserted batch of 10 records.
 All data has been successfully uploaded to the database.
 
-Calculating Age Distribution...
+Calculating Age Distribution:
 
---- Age Distribution Report ---
+Age Distribution Report
 ┌───────────┬──────────────┬──────────────────┐
 │ (index)   │  Age-Group   │ % Distribution   │
 ├───────────┼──────────────┼──────────────────┤
@@ -57,4 +57,3 @@ Calculating Age Distribution...
 │ 2         │  '40 to 60'  │ '...'            │
 │ 3         │  '> 60'      │ '...'            │
 └───────────┴──────────────┴──────────────────┘
----------------------------------
