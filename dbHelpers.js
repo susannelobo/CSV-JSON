@@ -28,7 +28,7 @@ async function insertDataBatch(batch) {
   }
 }
 
-// Age distribution
+// Query for age distribution
 async function calculateAndPrintAgeDistribution() {
   console.log('\nCalculating Age Distribution...');
   const queryText = `
@@ -70,3 +70,4 @@ async function calculateAndPrintAgeDistribution() {
 }
 
 module.exports = { insertDataBatch, calculateAndPrintAgeDistribution };
+
