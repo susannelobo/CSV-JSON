@@ -4,7 +4,7 @@ const path = require('path');
 const readline = require('readline');
 require('dotenv').config();
 
-// --- pg (Node-Postgres) setup ---
+// setting up psql
 const { Pool } = require('pg');
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
@@ -18,7 +18,7 @@ pool.query('SELECT NOW()', (err, res) => {
   }
 });
 
-// --- HELPER FUNCTION: setNestedProperty ---
+// Processes Dot notation 
 function setNestedProperty(obj, path, value) {
   if (value === '') {
     return;
@@ -40,7 +40,6 @@ function setNestedProperty(obj, path, value) {
   }
 }
 
-// --- HELPER: transformForDb ---
 function transformForDb(obj) {
   const { name, age, address, ...additional_info } = obj;
   const dbRow = {
@@ -52,7 +51,7 @@ function transformForDb(obj) {
   return dbRow;
 }
 
-// --- HELPER: insertDataBatch ---
+// Inserts data in the JSON file
 async function insertDataBatch(batch) {
   if (batch.length === 0) return;
 
@@ -80,10 +79,7 @@ async function insertDataBatch(batch) {
   }
 }
 
-// --- NEW FUNCTION: Age Distribution Report ---
-/**
- * Queries the database and prints the age distribution report.
- */
+// Queries the database and prints the age distribution report.
 async function calculateAndPrintAgeDistribution() {
   console.log('\nCalculating Age Distribution...');
 
@@ -134,7 +130,6 @@ async function calculateAndPrintAgeDistribution() {
     console.error('Error calculating age distribution:', err);
   }
 }
-// ------------------------------------------
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -143,7 +138,6 @@ app.get('/', (req, res) => {
   res.send('Hello! Your Express server is running. 🚀');
 });
 
-// --- UPDATED app.post BLOCK ---
 app.post('/upload', async (req, res) => {
   console.log('Upload request received. Starting CSV processing...');
 
@@ -165,7 +159,7 @@ app.post('/upload', async (req, res) => {
     crlfDelay: Infinity 
   });
 
-  // Using a try-catch-finally to ensure we always respond
+  // Using a try-catch-finally to ensure it always respond
   try {
     for await (const line of rl) {
       if (isFirstLine) {
@@ -196,10 +190,9 @@ app.post('/upload', async (req, res) => {
     console.log('All data has been successfully uploaded to the database.');
     res.status(200).send({ message: 'File processing complete. Data inserted.' });
 
-    // --- RUN THE REPORT ---
-    // We run this *after* sending the response so the user isn't waiting
+    // RUN THE REPORT 
+    // Runs after sending the response so the user isn't waiting
     calculateAndPrintAgeDistribution();
-    // ----------------------
 
   } catch (err) {
     console.error('An error occurred during the upload process:', err);
@@ -208,7 +201,6 @@ app.post('/upload', async (req, res) => {
     }
   }
 });
-// ------------------------------
 
 app.listen(PORT, () => {
   console.log(`Server is listening on http://localhost:${PORT}`);
