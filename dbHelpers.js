@@ -30,7 +30,7 @@ async function insertDataBatch(batch) {
 
 // Query for age distribution
 async function calculateAndPrintAgeDistribution() {
-  console.log('\nCalculating Age Distribution...');
+  console.log('\nCalculating Age Distribution:');
   const queryText = `
     WITH age_groups AS (
       SELECT
@@ -70,4 +70,5 @@ async function calculateAndPrintAgeDistribution() {
 }
 
 module.exports = { insertDataBatch, calculateAndPrintAgeDistribution };
+
 
