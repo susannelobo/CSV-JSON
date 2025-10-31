@@ -1,6 +1,4 @@
-# KelpAssignment
-
-Kelp Coding Challenge: CSV to JSON API
+# CSV to JSON API
 
 This is a Node.js (Express) application built for the Kelp coding challenge. It provides an API endpoint that reads a CSV file, parses it, uploads the data to a PostgreSQL database, and then prints an age distribution report to the console.
 
